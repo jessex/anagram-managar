@@ -1,20 +1,19 @@
+DESCRIPTION
+
 anagram manager is a simple command line utility to find anagram groupings in a
 file of text. Supply the name of a text file as the first command line argument
-and it will return each anagram grouping.
+and it will return each anagram grouping. The file will be read in and separated 
+into words. Following analysis, anagrams will be returned to the standard output 
+in groupings, as shown below:
 
-At the moment, this only finds "word" anagrams (not phrase anagrams, a la
-"William Shakespeare" -> "I am a weakish speller"), where a word is defined as
-any contiguous String of characters, converted to lower case, with trailing
-punctuation discarded. Eligible words are separated by spaces. Contractions are
-disregarded, a la "doesn't" -> "stoned".
+INSTRUCTIONS
 
 For now, place the code into its own directory and run:
 
 $ javac anagrams/Main.java anagrams/Reader.java anagrams/Word.java anagrams/Tree.java
 $ java anagrams/Main [myfile]
 
-The anagrams will be returned to the standard output in groupings, as shown
-below:
+EXAMPLE
 
 Grouping: eilsv
 lives elvis
@@ -23,5 +22,13 @@ Grouping: acrt
 trac cart
 
 Grouping: amrs
-mars rams
+mars rams arms
+
+BUGS
+
+At the moment, this only finds "word" anagrams (not phrase anagrams, a la
+"William Shakespeare" -> "I am a weakish speller"), where a word is defined as
+any contiguous String of characters, converted to lower case, with trailing
+punctuation discarded. Eligible words are separated by spaces. Contractions are
+disregarded, a la "doesn't" -> "stoned".
 
